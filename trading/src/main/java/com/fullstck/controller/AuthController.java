@@ -27,8 +27,11 @@ public class AuthController {
         User newUser = new User();
         newUser.setFullName(user.getFullName());
         newUser.setEmail(user.getEmail());
+        newUser.setPhoneNumber(user.getPhoneNumber());
         newUser.setPassword(user.getPassword());
+
         User savedUser = userRepository.save(newUser);
+
         return new  ResponseEntity<>(savedUser, HttpStatus.CREATED);
     }
 }

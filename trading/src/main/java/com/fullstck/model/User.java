@@ -19,6 +19,7 @@ public class User {
 
     private String fullName;
     private String email;
+    private Long phoneNumber;
 
     @JsonProperty(access = JsonProperty.Access.WRITE_ONLY)
     private String password;
